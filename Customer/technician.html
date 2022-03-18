@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>home</title>
+    <style>
+        .t_topic{
+            text-align: center;
+            font-size: 55px;
+            font-weight: bold;
+}
+        .select_list {
+			width: 300px;
+			color: #014B70;
+			font-size: 18px;
+			height: 40px;
+			border: 1px solid #014B70;
+		}
+        .container {
+            margin-top: 80px;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: flex-start;
+            min-height: 30em;
+            box-sizing: border-box;
+        }
+        #display_all {
+            margin-top: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Navigation bar-->
+    <!--CUSTOMER HEADER BAR-->
+    <header>
+        <section>
+            <span><a href="#"><i class="fa fa-comment" style="color: #F7941E;"></i> 24/7 Support</a></span>
+            <span><a href="#"><i class="fa fa-envelope" style="color: #F7941E;"></i> computer.solutions@gmail.com </a></span>
+            <span><a href="#"><i class="fa fa-phone" style="color: #F7941E;"></i> tell no</a></span>
+        </section>
+        <section></section>
+        <section>
+            <span><a href="#"><i class="fa fa-lock" style="color: #F7941E;"></i> </a></span>
+            <span><a href="#"><i class="fa fa-sign-out" style="color: #F7941E;"></i> Logout </a></span>
+        </section>
+                
+        <section>
+            <span><a href="#"><i class="fa fa-user" style="color: #F7941E;"></i> Customer</a></span>
+        </section>
+        
+    </header>
+
+
+    <!--CUSTOMER NAVIGATION BAR-->
+    <nav>
+        <div class="topnavbar" id="myTopnav">
+            <a href="profile.html" id="logo"><img src="images/logo/logo3.png" alt="" height="50" width="250"></a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="technician.html">Technicians</a>
+            <a href="sellers.html">sellers</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="laptops.html">Laptops</a>
+            <a href="computers.html">Computers</a>
+            <a href="#">Home</a>
+        </div>
+    </nav>
+    <!--end of Navigation bar-->
+    
+
+    <div class="topImg">
+        <img src="images/seller_page.jpg" alt="First slide" style="height: 500px; width: 100%; border-radius: 10px;">
+        <h1 class="t_topic">Technicians</h1>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="column" style="width: 25%; background-color: #014B70; height: 100%; border-radius: 0 10px 10px 0; color: #fff; padding-left: 40px;">
+
+            <h2>Choose Category</h2><br><br><br>
+            <select name="category" class="select_list" id="category">
+                <option disabled="disabled" selected=""> -- Select Category -- </option>
+            </select><br><br>
+
+        </div>
+        <div class="column" style="width: 75%;">
+            <div id="display"></div>
+        </div>
+    </div>
+    <div class="container" style="margin-bottom: -1000px;">
+            <div class="row" style="width: 95%; border: 5px solid #014B70; border-radius: 10px; color: #014B70; height: 60px;">
+                <h1 style="margin: auto;">All Accessories</h1>
+            </div>
+            
+            
+        </div>
+<div id="display_all"></div>
+
+    <br><br><br><br>
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<footer>
+	<div class="content">
+		<div class="top">
+			<div class="logo-details">
+				<span class="logo_name">Computer Solutions</span><br>
+                <span class="logo_name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application</span>
+			</div>
+			<div class="media-icons">
+				<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+				<a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+			</div>
+		</div>
+		<div class="link-boxes">
+			<ul class="box">
+				<li class="link_name">Links</li>
+				<li><a href="#">Home</a></li>
+				<li><a href="contactUs.html">Contact</a></li>
+				<li><a href="aboutUs.html">About Us</a></li>
+			
+			</ul>
+			<ul class="box">
+				<li class="link_name">Services</li>
+				<li><a href="computers.html">Computers</a></li>
+				<li><a href="laptops.html">Laptops</a></li>
+				<li><a href="accessories.html">Accessories</a></li>
+			
+			</ul>
+	        <ul class="box">
+				<li class="link_name">Other services</li>
+				<li><a href="sellers.html">Sellers</a></li>
+				<li><a href="technician.html">Technicians</a></li>
+			
+			</ul>
+			<ul class="box">
+				<li class="link_name">Contact</li>
+				<li><a href="#">tell no1</a></li>
+				<li><a href="#">tell no2</a></li>
+				<li><a href="#">computer.solutions@gmail.com</a></li>
+			</ul>
+			
+		</div>
+	</div>
+	<div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2021 <a href="#">Computer Solutions Application</a></span>
+      </div>
+    </div>
+</footer>
+</body>
+</html>
