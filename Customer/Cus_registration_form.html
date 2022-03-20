@@ -79,7 +79,7 @@
             <span><a href="#"><i class="fa fa-phone" style="color: #F7941E;"></i>tell</a></span>
         </section>
         <section>
-            <span><a href=""><i class="fa fa-user" style="color: #F7941E;"></i> Customer</a></span>
+            <span><a href="cus_login.html"><i class="fa fa-user" style="color: #F7941E;"></i> Customer</a></span>
         </section>
     </header>
     <!--CUSTOMER NAVIGATION BAR-->
@@ -98,7 +98,7 @@
    				<h1> Sign up </h1>
  			</div>
 	
- 				 <form method="post" action="#">
+ 				 <form name="CusRegiForm" method="post" action="#">
  				 	<label class="info">
  				   	<input type="text" name="fname" placeholder="First Name" required />
  				   	</label>
@@ -136,16 +136,16 @@
 					</select>
  				   	</label>
  				   	<label class="info">
- 				   	<input type="number" name="mobile" placeholder="Contact Number" required />
+ 				   	<input type="tellno" name="mobile" placeholder="Contact Number : xxx-xxxxxxx" required />
  				   	</label>
 					<label class="info">
- 				   	<input type="password" name="password" placeholder="Password" required />
+ 				   	<input type="password" name="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}"  placeholder="Password" required />
  				   	</label>
 					<label class="info">
  				   	<input type="password" name="reenterpw" placeholder="Confirm Password" required />
  				   	</label>
 
- 				   	<input type="submit" value='Register' name="register" class='btnlogin'>
+ 				   	<input type="submit" value='Register' name="register" class='btnlogin' onclick="return formValidation()">
  				</form>
                 <div class='loginfooter'></div>      
 		</div>
@@ -174,5 +174,66 @@
         </div>
     </footer>
 
+    <script>
+
+        //Form validation
+        function formValidation(){
+            var fnm = document.forms["CusRegiForm"]["fname"].value;
+            var lnm = document.forms["CusRegiForm"]["lname"].value;
+            var email = document.forms["CusRegiForm"]["email"].value;
+            var city = document.forms["CusRegiForm"]["city"].value;
+            var tell = document.forms["CusRegiForm"]["mobile"].value;
+            var pw = document.forms["CusRegiForm"]["password"].value;
+            var cpw = document.forms["CusRegiForm"]["reenterpw"].value;
+
+            // checking whether all the required fields are filled
+            if(fnm!="" && lnm!="" && email!="" && city!="" && tell!="" &&  pw!="" && cpw!=""){
+                //checking the first-name only contains alphebet letters
+				var letters = /^[A-Za-z]+$/ ;
+				if(fnm.match(letters)){
+                    //checking the last-name only contains alphebet letters 
+					if(lnm.match(letters)){
+                        //Checking the validation of the Email address 
+                        var validemail = /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                        if(email.match(validemail)){
+                            //Checking the validation of the telephone number
+                            var phoneno = /^\(?([0-9]{3})\)?[-]?([0-9]{7})$/;
+                            if(tell.match(phoneno) && tell.length==11){
+                                //checking whether the password is a strong
+								var validpw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}$/;
+                                if(pw.match(validpw) && pw.length>7){
+                                    //checking whether the password and the confirm password is same
+									if(pw==cpw){
+										return true;
+									}else{
+										alert("Passwords are not same!");
+										return false;
+									}
+                                }else{
+                                    alert("Invalid password! Please provide a strong password using both lower and upper case letters, numeric and symbols. Use 8 or more characters.");
+									return false;
+                                }
+                            }else{
+				                alert("Invalid tellephone number. Please use the given pattern.");
+                                return false;
+                            }
+                        }else{
+                            alert("Invalid email address");
+				            return false;
+                        }
+                    }else{
+						alert("Invalid input for the last name.");
+						return false;
+				}
+                }else{
+						alert("Invalid input for the first name.");
+						return false;
+				}
+            }else{
+                alert("Please fill all the fields.");
+				return true;
+            }
+        }
+    </script>
 </body>
 </html>
