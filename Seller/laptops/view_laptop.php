@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 
 $lap_id = $_GET["id"];
 
@@ -16,7 +16,7 @@ $row = mysqli_fetch_array($run);
 <head>
     <meta charset="utf-8">
     <title> <?php echo $row["title"]; ?> </title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,7 +28,7 @@ $row = mysqli_fetch_array($run);
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="../myjs.js"></script>
+    <script src="../../sources/js/myjs.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/dt-1.11.3/datatables.min.css" />
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/dt-1.11.3/datatables.min.js"></script>
 
@@ -101,7 +101,7 @@ $row = mysqli_fetch_array($run);
             <div class="row">
                 <div class="column" style="width: 360px;">
                     <div class="row">
-                        <img src="../images/uploads/laptops/<?php echo $row["image"]; ?>" alt="" style="height: 350px; width: 350px;">
+                        <img src="../../images/uploads/laptops/<?php echo $row["image"]; ?>" alt="" style="height: 350px; width: 350px;">
                     </div>
                     <div class="row">
                         <div class="price">Rs. <?php echo number_format($row["price"], 2); ?></div>

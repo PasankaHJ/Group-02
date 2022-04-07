@@ -1,7 +1,7 @@
 <?PHP 
 
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 
     $id = $_POST["delete_id"];
     $delete_customer = "DELETE FROM accessories WHERE id='$id'";

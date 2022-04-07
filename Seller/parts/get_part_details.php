@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 
     $id = $_SESSION['sid'];
     $output = "";
@@ -23,7 +23,7 @@ include "../db/db.php";
      </div>
      </div>
                 
-    ";
+                ";
 
     while ($row = mysqli_fetch_array($run)) {
         $cat = $row["type_id"];
@@ -39,7 +39,7 @@ include "../db/db.php";
                 <a href='view_part.php?id=".$row["id"]." ' style='text-decoration: none; color: black;'>
                     <div class='card-div'>        
                         <div class='gow-img-div img-div'>
-                            <img src='../images/uploads/parts/".$row["image"]."' alt='god-of-war-figurine' height='200' width='200'>
+                            <img src='../../images/uploads/parts/".$row["image"]."' alt='god-of-war-figurine' height='200' width='200'>
                         </div>
                         <div class='text-container'>
                             <h2 class='item-name'>" . $row["title"] . "</h2>

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include "../db/db.php";
 <head>
     <meta charset="utf-8">
     <title> Home </title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -141,6 +141,10 @@ include "../db/db.php";
             </div>
 
         </div>
+
+
+
+
     </div>
     <?php include "footer.php"; ?>
 </body>

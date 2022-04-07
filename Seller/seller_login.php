@@ -1,6 +1,9 @@
 <?php
 	session_start();
-	include "db/db.php";
+	include "../db/db.php";
+
+	
+
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +11,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login Here</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>

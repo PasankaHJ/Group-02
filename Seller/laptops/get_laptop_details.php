@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 
     $id = $_SESSION['sid'];
     $output = "";
@@ -35,7 +35,7 @@ include "../db/db.php";
                 <a href='view_laptop.php?id=".$row["id"]." ' style='text-decoration: none; color: black;'>
                     <div class='card-div'>        
                         <div class='gow-img-div img-div'>
-                            <img src='../images/uploads/laptops/".$row["image"]."' alt='god-of-war-figurine' height='200' width='200'>
+                            <img src='../../images/uploads/laptops/".$row["image"]."' alt='god-of-war-figurine' height='200' width='200'>
                         </div>
                         <div class='text-container'>
                             <h2 class='item-name'>" . $row["title"] . "</h2>

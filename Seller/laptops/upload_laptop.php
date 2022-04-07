@@ -7,7 +7,7 @@
 
         $name = rand(100, 999) . '.' . $extension;
 
-        $location = '../images/uploads/laptops/'. $name;
+        $location = '../../images/uploads/laptops/'. $name;
 
         move_uploaded_file($_FILES['image']['tmp_name'], $location);
 

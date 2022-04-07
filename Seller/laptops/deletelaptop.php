@@ -1,7 +1,7 @@
 <?PHP 
 
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 
     $id = $_POST["delete_id"];
     $delete_laptop = "DELETE FROM laptops WHERE id='$id'";
@@ -11,5 +11,6 @@ include "../db/db.php";
     }else{
           header("location:laptops.php");
     }
+
 
 ?>

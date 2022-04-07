@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../footer.css">
+        <link rel="stylesheet" href="../../css/footer.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -8,8 +8,8 @@
 	<div class="content">
 		<div class="top">
 			<div class="logo-details">
-				<span class="logo_name">Computer Solutions</span><br>
-                <span class="logo_name">Application</span>
+				<span class="logo_name">Your PC</span><br>
+                <span class="logo_name">Solutions</span>
 			</div>
 			<div class="media-icons">
 				<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
@@ -35,27 +35,34 @@
 				<li><a href="../accessories/accessories.php">Accessories</a></li>
 			
 			</ul>
-			<ul class="box">
+	<ul class="box">
 				<li class="link_name">Other services</li>
-				<li><a href="../sellers.php">Sellers</a></li>
-				<li><a href="../technicians.php">Technicians</a></li>
+				<li><a href="sellers.php">Sellers</a></li>
+				<li><a href="technicians.php">Technicians</a></li>
 			
 			</ul>
 			<ul class="box">
 				<li class="link_name">Contact</li>
-				<li><a href="tel:077-988-2562">+94-77-988-2562</a></li>
-				<li><a href="tel:078-319-9592">+94-78-319-9592</a></li>
-				<li><a href="mailto:computer.solutions@gmail.com">computer.solutions@gmail.com</a></li>
+				<li><a href="tel:077-116-6461">+94 77-116-6461</a></li>
+				<li><a href="tel:071-401-9012">+94 71-401-9012</a></li>
+				<li><a href="mailto:solutions.yourpc.support@gmail.com">solutions.yourpc.support@gmail.com</a></li>
 				
 			
 			</ul>
 			
+	
+	
+	
 		</div>
 	</div>
-	<div class="bottom-details">
-      	<div class="bottom_text">
-        	<span class="copyright_text">Copyright © 2021 <a href="#">Computer Solutions Application</a></span>
-      	</div>
+	    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2021 <a href="#">YourPC Solutions</a></span>
+        <!-- <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          
+        </span> -->
+      </div>
     </div>
 </footer>
 </body>

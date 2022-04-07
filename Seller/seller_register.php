@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	include "db/db.php";
+	include "../db/db.php";
 
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<title> Home </title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
@@ -78,7 +78,7 @@
  				   	<label class="info">
  				   	<input type="email" name="email" placeholder="Email" required />
  				   	</label>
-					<label class="info">
+						<label class="info">
  				   	<input type="text" name="shop_name" placeholder="Company Name" required />
  				   	</label>
 						<label class="info">
@@ -113,7 +113,7 @@
 
 						<div id="image_name"></div>
 
- 				   	<input type="submit" value='Register' name="register" class='btnlogin' onclick="return formValidation()">
+ 				   	<input type="submit" value='Register' name="register" class='btnlogin'>
  				 </form>
    			<div class='loginfooter'>
     			
@@ -174,61 +174,5 @@
 
         });
     });
-
-	//Form validation
-	function formValidation(){
-            var fnm = document.forms["CusRegiForm"]["fname"].value;
-            var lnm = document.forms["CusRegiForm"]["lname"].value;
-            var email = document.forms["CusRegiForm"]["email"].value;
-            var shopname = document.forms["CusRegiForm"]["shop_name"].value;
-            var pic = document.forms["CusRegiForm"]["picture"].value;
-            var address = document.forms["CusRegiForm"]["address"].value;
-            var city = document.forms["CusRegiForm"]["city"].value;
-            var tell = document.forms["CusRegiForm"]["mobile"].value;
-            var pw = document.forms["CusRegiForm"]["password"].value;
-            var cpw = document.forms["CusRegiForm"]["reenterpw"].value;
-
-            // checking whether all the required fields are filled
-            if(fnm!="" && lnm!="" && email!="" && shopname!="" && pic!="" && address!="" && city!="" && tell!="" &&  pw!="" && cpw!=""){
-                //checking the first-name only contains alphebet letters
-				var letters = /^[A-Za-z]+$/ ;
-				if(fnm.match(letters)){
-                    //checking the last-name only contains alphebet letters 
-					if(lnm.match(letters)){
-                        //Checking the validation of the Email address 
-                        var validemail = /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-                        if(email.match(validemail)){
-                                //checking whether the password is a strong
-								var validpw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}$/;
-                                if(pw.match(validpw) && pw.length>7){
-                                    //checking whether the password and the confirm password is same
-									if(pw==cpw){
-										return true;
-									}else{
-										alert("Passwords are not same!");
-										return false;
-									}
-                                }else{
-                                    alert("Invalid password! Please provide a strong password using both lower and upper case letters, numeric and symbols. Use 8 or more characters.");
-									return false;
-                                }
-                        }else{
-                            alert("Invalid email address");
-				            return false;
-                        }
-                    }else{
-						alert("Invalid input for the last name.");
-						return false;
-				}
-                }else{
-						alert("Invalid input for the first name.");
-						return false;
-				}
-            }else{
-                alert("Please fill all the fields.");
-				return true;
-            }
-        }
-
 </script>
 </html>

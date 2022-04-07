@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ include "../db/db.php";
 <head>
     <meta charset="utf-8">
     <title> Computers </title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +20,7 @@ include "../db/db.php";
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="../myjs.js"></script>
+    <script src="../../sources/js/myjs.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/dt-1.11.3/datatables.min.css" />
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/dt-1.11.3/datatables.min.js"></script>
 
@@ -60,7 +60,7 @@ include "../db/db.php";
             transform: scale(1.01);
         }
 
-        /* General styling of all cards and heart divs */
+        /* ======== General styling of all cards and heart divs ========== */
         .img-div {
             width: 100%;
             height: 8em;
@@ -87,7 +87,7 @@ include "../db/db.php";
             transform: translateY(7.5%);
         }
 
-        /* text Container Styling general */
+        /* ======== text Container Styling general ======== */
 
         .text-container {
             width: 100%;
@@ -108,7 +108,7 @@ include "../db/db.php";
 
         .text-container .item-name {
             color: #014B70;
-            font-size: 0.6em;
+            font-size: 1.2em;
             font-weight: var(--title-font-weight);
             color: var(--heading-color);
         }
@@ -119,8 +119,9 @@ include "../db/db.php";
             color: var(--date-text-color);
         }
 
-        /* Pricing and cart div */
+        /* === Pricing and cart div  ===== */
         .pricing-and-cart {
+            /* background-color: wheat; */
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -136,16 +137,17 @@ include "../db/db.php";
         }
 
         .previous-price {
-            font-size: 0.6rem;
+            font-size: 0.8rem;
             font-weight: var(--pricing-font-weight);
             color: var(--previous-price-text-color);
             text-decoration: line-through;
+            /* background-color: whitesmoke; */
             text-align: left;
         }
 
         .current-price {
             color: var(--current-price-text-color);
-            font-size: 25px;
+            font-size: 30px;
             font-weight: var(--pricing-font-weight);
             width: 300px;
             height: 65px;

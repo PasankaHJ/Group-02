@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../db/db.php";
+include "../../db/db.php";
 
 if(isset($_POST["add"])) {
 
@@ -23,6 +23,7 @@ if(isset($_POST["add"])) {
                 $_SESSION["adding_status"] = 0;
                 header("location:add_laptop_form.php");
             }
+
     }
 
 ?>

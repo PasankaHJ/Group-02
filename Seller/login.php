@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include "db/db.php";
+	include "../db/db.php";
 
 	if(isset($_POST["submit"])) {
 		if(isset($_POST["email"]) && isset($_POST["password"])){

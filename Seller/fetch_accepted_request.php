@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "db/db.php";
+    include "../db/db.php";
 
     $id = $_SESSION["sid"];
     $output = "";
@@ -36,7 +36,7 @@
                 <div class='column'>
                     <div class='card-div'>        
                         <div class='gow-img-div img-div'>
-                            <img src='images/uploads/computers/".$r2["image"]."' alt='god-of-war-figurine' height='200' width='200'>
+                            <img src='../images/uploads/computers/".$r2["image"]."' alt='god-of-war-figurine' height='200' width='200'>
                         </div>
                         <div class='text-container'>
                             <h2 class='item-name'>" . $cus_fname . " " . $cus_lname . "</h2>
@@ -68,7 +68,7 @@
         <div class='column'>
             <div class='card-div'>        
                 <div class='gow-img-div img-div'>
-                    <img src='images/uploads/".$cat."/".$r2["image"]."' alt='god-of-war-figurine' height='200' width='200'>
+                    <img src='../images/uploads/".$cat."/".$r2["image"]."' alt='god-of-war-figurine' height='200' width='200'>
                 </div>
                 <div class='text-container'>
                     <h2 class='item-name'>" . $cus_fname . " " . $cus_lname . "</h2>
@@ -88,6 +88,8 @@
          </div>
                  ";
         }
+
+        
 
     }
     $output .= '</div>';

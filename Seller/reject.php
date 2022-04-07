@@ -1,5 +1,5 @@
 <?php 
-include "db/db.php";
+include "../db/db.php";
 $id = $_POST["id"];
 $query = "UPDATE requests SET status = 2 WHERE id = $id";
 $run = mysqli_query($conn, $query);

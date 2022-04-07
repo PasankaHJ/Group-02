@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db/db.php";
+include "../db/db.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ include "db/db.php";
 <head>
 	<meta charset="utf-8">
 	<title> Home </title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,7 +55,7 @@ include "db/db.php";
 		}
 
 
-		/* General styling of all cards and heart divs */
+		/* ======== General styling of all cards and heart divs ========== */
 		.img-div {
 			width: 100%;
 			height: 8em;
@@ -82,7 +82,7 @@ include "db/db.php";
 			transform: translateY(7.5%);
 		}
 
-		/* text Container Styling general */
+		/* ======== text Container Styling general ======== */
 
 		.text-container {
 			width: 100%;
@@ -114,8 +114,9 @@ include "db/db.php";
 			color: var(--date-text-color);
 		}
 
-		/* Pricing and cart div */
+		/* === Pricing and cart div  ===== */
 		.pricing-and-cart {
+			/* background-color: wheat; */
 			width: 100%;
 			display: flex;
 			flex-direction: row;
@@ -135,6 +136,7 @@ include "db/db.php";
 			font-weight: var(--pricing-font-weight);
 			color: var(--previous-price-text-color);
 			text-decoration: line-through;
+			/* background-color: whitesmoke; */
 			text-align: left;
 		}
 
@@ -175,7 +177,7 @@ include "db/db.php";
 			<div class="row" style="margin-top: 120px; margin-left: 70px;">
 				<div class="column" style="margin-left: 120px;">
 					<div class="card">
-						<img src="images/computer.jpg" height="200" width="200">
+						<img src="../images/computer.jpg" height="200" width="200">
 						<div class="card-txt">
 							<a href="computers/computers.php">
 								<h3> Computers </h3>
@@ -186,7 +188,7 @@ include "db/db.php";
 				</div>
 				<div class="column" style="margin-left: 120px;">
 					<div class="card">
-						<img src="images/laptop.jpg" height="200" width="200">
+						<img src="../images/laptop.jpg" height="200" width="200">
 						<div class="card-txt">
 							<a href="laptops/laptops.php">
 								<h3> Laptops </h3>
@@ -196,7 +198,7 @@ include "db/db.php";
 				</div>
 				<div class="column" style="margin-left: 120px;">
 					<div class="card">
-						<img src="images/accessories.jpg" height="200" width="200">
+						<img src="../images/accessories.jpg" height="200" width="200">
 						<div class="card-txt">
 							<a href="accessories/accessories.php">
 								<h3> Accessories </h3>
@@ -206,7 +208,7 @@ include "db/db.php";
 				</div>
 				<div class="column" style="margin-left: 120px;">
 					<div class="card">
-						<img src="images/parts.jpg" height="200" width="200">
+						<img src="../images/parts.jpg" height="200" width="200">
 						<div class="card-txt">
 							<a href="parts/parts.php">
 								<h3> Parts </h3>
@@ -226,23 +228,23 @@ include "db/db.php";
 						</ol>
 						<div class="carousel-inner" style="border-radius: 50px;">
 							<div class="carousel-item filter active">
-								<img class="d-block w-100" src="images/homeslider_3.jpg" alt="First slide" style="height: 768px;">
+								<img class="d-block w-100" src="../images/homeslider_3.jpg" alt="First slide" style="height: 768px;">
 								<div class="carousel-caption">
-									<h1 class="h1">Welcome to Computer Solutions Application</h1>
+									<h1 class="h1">Welcome to Your PC solutions</h1>
 								</div>
 							</div>
 
 							<div class="carousel-item filter" style="border-radius: 50px;">
-								<img class="d-block w-100" src="images/homeslider_2.jpg" alt="Second slide" style="height: 768px;">
+								<img class="d-block w-100" src="../images/homeslider_2.jpg" alt="Second slide" style="height: 768px;">
 								<div class="carousel-caption">
-									<h1 class="h1">Welcome to Computer Solutions Application</h1>
+									<h1 class="h1">Welcome to Your PC solutions</h1>
 								</div>
 							</div>
 
 							<div class="carousel-item filter" style="border-radius: 50px;">
-								<img class="d-block w-100" src="images/homeslider_1.jpg" alt="Third slide" style="height: 768px;">
+								<img class="d-block w-100" src="../images/homeslider_1.jpg" alt="Third slide" style="height: 768px;">
 								<div class="carousel-caption">
-									<h1 class="h1">Welcome to Computer Solutions Application</h1>
+									<h1 class="h1">Welcome to Your PC solutions</h1>
 								</div>
 							</div>
 						</div>

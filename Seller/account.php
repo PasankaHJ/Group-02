@@ -1,10 +1,22 @@
+<?php
 
+session_start();
+include "../db/db.php";
+
+$id = $_GET["id"];
+
+$query = "SELECT * FROM sellers WHERE id = '$id'";
+$run = mysqli_query($conn,$query);
+$row = mysqli_fetch_array($run);
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title> Home </title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
@@ -28,7 +40,7 @@
                   </div>
                   <div class="profile-picture">
 
-                    <a href=""><img src="images/hacking-hackers-computer-anonymous-wallpaper-preview.jpg"></a>
+                    <a href=""><img src="../images/hacking-hackers-computer-anonymous-wallpaper-preview.jpg"></a>
                     <span style="font-family: sans-serif;"><?php echo $row["fname"]; ?></span>
                     <br>
                     <small style="font-family: sans-serif;"><?php echo $row["lname"]; ?></small>
@@ -36,7 +48,36 @@
 
                   <div class="profile-content">
 
+                    <div class="content-left">
+
+                      <!--<ul>
+
+                        <li><a><span class="entypo-compass"></span> USA, California</a></li>
+                        <li><a><span class="entypo-graduation-cap "></span> California College of the Arts </a></li>
+                        <li><a><span class="entypo-suitcase"></span> Graphic Designer at Wicrosoft</a></li>
+                        <li><a><span class="entypo-lock-open"></span> Public</a></li>
+
+                      </ul>-->
+
+                    </div>
+
                     <div class="content-middle">
+
+                      <!--<div class="content-md-left">
+
+                        <img src="https://i.pravatar.cc/300?img=7">
+
+                      </div>
+
+                      <div class="content-md-middle">
+
+                        <div class="post-title-name">
+                          <a href="">Daniel Jack</a><br>
+                        </div>
+
+                        <div class="post-title-time">
+                          <a href=""></a>
+                        </div>-->
 
                          <div class="post-desc">
                            <br><br>
@@ -76,6 +117,18 @@
                           <br><br><br>
 
                         </div>
+
+                        <!--<div class="post-info">
+
+                          <ul>
+
+                            <li><a href="" class="like"><span class="entypo-thumbs-up"></span> Like</a></li>
+                            <li><a href="" class="comment"><span class="entypo-comment"></span> Comment</a></li>
+                            <li><a href="" class="share"><span class="entypo-share"></span> Share</a></li>
+
+                          </ul>
+
+                        </div>-->
 
                       </div>
 
